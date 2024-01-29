@@ -4,6 +4,6 @@ This is a repository of my final year project named "Multiple disease detection"
  Open terminal and write command.
  cd frontend/mdp
  npm start
-  Open another terminal and write command.
-  cd backend
-  python app.py
+ Open another terminal and write command.
+ cd backend
+ python app.py
