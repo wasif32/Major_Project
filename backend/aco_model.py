@@ -1,4 +1,10 @@
 # aco_model.py
+import warnings
+
+# Ignore scikit-learn and joblib warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
+warnings.filterwarnings("ignore", category=UserWarning, module="joblib")
+
 import random
 import math
 import pandas as pd

@@ -29,16 +29,10 @@ def predict():
 
         # Make predictions
         prediction = loaded_aco_model.clf.predict(input_data_selected)
-        
-
-        # Print the prediction in the backend terminal
-        print("Prediction:", prediction)
 
         return jsonify({'prediction': prediction.tolist()}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 400
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
