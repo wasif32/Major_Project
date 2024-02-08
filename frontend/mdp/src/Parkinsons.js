@@ -1,15 +1,29 @@
 import React, { useState } from "react";
 
-function DiabetesApp() {
+function ParkinsonsApp() {
   const [formValues, setFormValues] = useState({
-    pregnancies: 0,
-    glucose: 0,
-    bloodPressure: 0,
-    skinThickness: 0,
-    insulin: 0,
-    bmi: 0,
-    diabetesPedigreeFunction: 0,
-    age: 0,
+    "MDVP:Fo(Hz)": 0,
+    "MDVP:Fhi(Hz)": 0,
+    "MDVP:Flo(Hz)": 0,
+    "MDVP:Jitter(%)": 0,
+    "MDVP:Jitter(Abs)": 0,
+    "MDVP:RAP": 0,
+    "MDVP:PPQ": 0,
+    "Jitter:DDP": 0,
+    "MDVP:Shimmer": 0,
+    "MDVP:Shimmer(dB)": 0,
+    "Shimmer:APQ3": 0,
+    "Shimmer:APQ5": 0,
+    "MDVP:APQ": 0,
+    "Shimmer:DDA": 0,
+    NHR: 0,
+    HNR: 0,
+    RPDE: 0,
+    DFA: 0,
+    spread1: 0,
+    spread2: 0,
+    D2: 0,
+    PPE: 0,
   });
 
   const [predictions, setPredictions] = useState([]);
@@ -27,8 +41,8 @@ function DiabetesApp() {
     const inputArray = Object.values(formValues).map(Number);
 
     try {
-      // Send input data to the Flask backend for diabetes prediction
-      const response = await fetch("http://localhost:5001/predict_diabetes", {
+      // Send input data to the Flask backend for Parkinson's prediction
+      const response = await fetch("http://localhost:5001/predict_parkinsons", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +56,7 @@ function DiabetesApp() {
 
       // Get predictions from the backend
       const data = await response.json();
-      setPredictions(data.prediction);
+      setPredictions(data.parkinsons_prediction);
     } catch (error) {
       console.error("Error:", error.message);
     }
@@ -50,7 +64,7 @@ function DiabetesApp() {
 
   return (
     <div>
-      <h1>Diabetes Prediction</h1>
+      <h1>Parkinson's Disease Prediction</h1>
       <form>
         {Object.entries(formValues).map(([name, value]) => (
           <div key={name}>
@@ -77,4 +91,4 @@ function DiabetesApp() {
   );
 }
 
-export default DiabetesApp;
+export default ParkinsonsApp;
