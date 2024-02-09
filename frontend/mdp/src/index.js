@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import ParkinsonsApp from "./Parkinsons";
+import ParkinsonsApp from "./BreastCancer";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
