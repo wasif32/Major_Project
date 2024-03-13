@@ -1,14 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./index.css";
-import ParkinsonsApp from "./BreastCancer";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root")); // Use createRoot from "react-dom/client"
+root.render(
   <React.StrictMode>
-    <ParkinsonsApp />
-  </React.StrictMode>,
-  document.getElementById("root")
+    <App />
+  </React.StrictMode>
 );
 
 reportWebVitals();

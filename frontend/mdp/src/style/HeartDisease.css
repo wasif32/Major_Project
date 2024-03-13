@@ -1,0 +1,276 @@
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://www.nhlbi.nih.gov/sites/default/files/styles/meta_image/public/2022-09/Heart.jpg?itok=Mfe23Jii');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(7px);
+}  */
+
+
+/* .container {
+    border: 5px solid #000000;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right, #4CAF50, #2196F3);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 30px;
+    margin: 25px 0px 50px 0px;
+    font-weight: bold;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+.columns-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.input-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-pair label {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    width: calc(100% - 22px); 
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+    color: #000000;
+}
+
+.input-field:focus {
+    border-color: #4CAF50;
+}
+
+.button {
+    margin: 20px 0px;
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: orange;
+}
+*/
+
+
+
+container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000; /* Change text color */
+    text-align: center; /* Center text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Make the title bold */
+  }
+  
+  .columns-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-column-gap: 50px; /* Add space between columns */
+    grid-row-gap: 20px; /* Add space between rows */
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 600px; /* Adjust as needed */
+    padding: 20px; /* Add padding */
+  }
+  
+  .input-pair {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .input-field {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Adjust as needed */
+  }
+  
+  .button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .diabetes-background {
+    background-image: url('https://publichealth.gwu.edu/sites/g/files/zaxdzs4586/files/images/Diabetes%20generic.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  .heart-background {
+    background-image: url('https://www.witf.io/wp-content/uploads/2021/04/iStock-1269115100-1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .breast-cancer-background {
+    background-image: url('https://www.oncologynurseadvisor.com/wp-content/uploads/sites/13/2023/09/GettyImages-1491010334.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .parkinsons-disease-background {
+    background-image: url('https://st2.depositphotos.com/36659880/46931/i/450/depositphotos_469312402-stock-photo-brain-symbol-presented-human-brain.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .parkinsons-disease-columns-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    grid-column-gap: 50px; /* Add space between columns */
+    grid-row-gap: 20px; /* Add space between rows */
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 800px; /* Adjust as needed */
+    padding: 20px; /* Add padding */
+  }
+  
+  
+  .heart-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Change text color */
+    text-align: center; /* Center text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Make the title bold */
+  }
+  
+  .heart-disease-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Change text color */
+  }
+  
+  .diabetes-disease-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000; /* Change text color */
+  }
+  
+  .breast-disease-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000; /* Change text color */
+  }
+  
+  .parkinsons-disease-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000; /* Change text color */
+  }
+  
+  .parkinsons-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000; /* Change text color */
+    text-align: center; /* Center text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Make the title bold */
+  }
+  
+  
+  .prediction-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; /* Adjust as needed */
+  }
+  
+  .prediction-item {
+    text-align: center;
+    border: 2px solid #000000; /* Add border */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    margin: 0 20px; /* Add margin for spacing between boxes */
+    background-color: #ccc;
+  }
+  
+  .prediction-item img {
+    width: 100%; /* Make the image cover the whole width of the box */
+    height: 150px; /* Maintain aspect ratio */
+    border-bottom: 2px solid black;
+  }
+  
+  .prediction-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .prediction-item ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .prediction-item ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  

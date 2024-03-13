@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function BreastCancerApp() {
+const BreastCancerApp = () => {
   const [formValues, setFormValues] = useState({
     radius_mean: 0,
     texture_mean: 0,
@@ -74,32 +74,37 @@ function BreastCancerApp() {
   };
 
   return (
-    <div>
-      <h1>Breast Cancer Prediction</h1>
-      <form>
-        {Object.entries(formValues).map(([name, value]) => (
-          <div key={name}>
-            <label>{name}:</label>
-            <input
-              type="number"
-              name={name}
-              value={value}
-              onChange={handleInputChange}
-            />
-          </div>
-        ))}
-      </form>
-      <button onClick={handlePredict}>Predict</button>
-      <div>
-        <h3>Predictions:</h3>
-        <ul>
-          {predictions.map((prediction, index) => (
-            <li key={index}>{prediction}</li>
+    <div className="container breast-cancer-background">
+      <div className="breast-disease-box">
+        <div className="title">Breast Cancer Prediction</div>
+        <form className="columns-container">
+          {Object.entries(formValues).map(([name, value]) => (
+            <div key={name} className="input-pair">
+              <label className="label">{name}:</label>
+              <input
+                type="number"
+                className="input-field"
+                name={name}
+                value={value}
+                onChange={handleInputChange}
+              />
+            </div>
           ))}
-        </ul>
+        </form>
+        <button className="button" onClick={handlePredict}>
+          Predict
+        </button>
+        <div>
+          <h3>Predictions:</h3>
+          <ul>
+            {predictions.map((prediction, index) => (
+              <li key={index}>{prediction}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default BreastCancerApp;

@@ -1,0 +1,145 @@
+body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background: linear-gradient(to bottom, #ffffff, #c288fc);
+ }
+ 
+ .app {
+   display: flex;
+   height: 100vh;
+ }
+ 
+ .main-content {
+   flex: 1;
+ 
+ }
+ 
+ .home-content {
+   text-align: center;
+ }
+ 
+ .home-content h1 {
+   font-size: 48px;
+   color: #333;
+   margin-bottom: 30px;
+ }
+ 
+ .home-content p {
+   font-size: 20px;
+   color: #555;
+   margin-bottom: 20px;
+ }
+ 
+ .home-content ul {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .home-content li {
+   font-weight: bold;
+   font-size: 20px;
+   color: #333;
+ }
+ 
+
+
+
+
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+ }
+ 
+ .title {
+   font-size: 24px;
+   margin-bottom: 20px;
+   color: #000000; /* Change text color */
+   text-align: center; /* Center text */
+   text-transform: uppercase; /* Convert text to uppercase */
+   font-weight: bold; /* Make the title bold */
+ }
+ 
+ .columns-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* Three columns */
+   grid-column-gap: 50px; /* Add space between columns */
+   grid-row-gap: 20px; /* Add space between rows */
+   justify-content: center;
+   align-items: flex-start;
+   max-width: 600px; /* Adjust as needed */
+   padding: 20px; /* Add padding */
+ }
+ 
+ .input-pair {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .label {
+   font-weight: bold;
+ }
+ 
+ .input-field {
+   margin-top: 5px;
+   padding: 8px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   width: 100%; /* Adjust as needed */
+ }
+ 
+ /* .button {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+ 
+ .button:hover {
+   background-color: #0056b3;
+ } */
+ 
+
+ 
+ 
+ .prediction-section {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 50px; /* Adjust as needed */
+ }
+ 
+ .prediction-item {
+   text-align: center;
+   border: 2px solid #000000; /* Add border */
+   border-radius: 10px; /* Add border radius for rounded corners */
+   margin: 0 20px; /* Add margin for spacing between boxes */
+   background-color: #ccc;
+ }
+ 
+ .prediction-item img {
+   width: 100%; /* Make the image cover the whole width of the box */
+   height: 150px; /* Maintain aspect ratio */
+   border-bottom: 2px solid black;
+ }
+ 
+ .prediction-item h3 {
+   font-size: 24px;
+   margin-bottom: 10px;
+ }
+ 
+ .prediction-item ul {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .prediction-item ul li {
+   font-size: 16px;
+   margin-bottom: 5px;
+ }
+ 

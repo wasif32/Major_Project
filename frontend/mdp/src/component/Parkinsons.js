@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ParkinsonsApp() {
+const ParkinsonsApp = () => {
   const [formValues, setFormValues] = useState({
     "MDVP:Fo(Hz)": 0,
     "MDVP:Fhi(Hz)": 0,
@@ -63,31 +63,34 @@ function ParkinsonsApp() {
   };
 
   return (
-    <div>
-      <h1>Parkinson's Disease Prediction</h1>
-      <form>
-        {Object.entries(formValues).map(([name, value]) => (
-          <div key={name}>
-            <label>{name}:</label>
-            <input
-              type="number"
-              name={name}
-              value={value}
-              onChange={handleInputChange}
-            />
+    <div className="container parkinsons-disease-background">
+        <div className="parkinsons-disease-box">
+          <div className="parkinsons-title">Parkinson's Disease Prediction</div>
+          <form className="parkinsons-disease-columns-container">
+            {Object.entries(formValues).map(([name, value]) => (
+              <div key={name} className="input-pair">
+                <label className="label">{name}:</label>
+                <input
+                  type="number"
+                  className="input-field"
+                  name={name}
+                  value={value}
+                  onChange={handleInputChange}
+                />
+              </div>
+            ))}
+          </form>
+          <button className="button" onClick={handlePredict}>Predict</button>
+          <div>
+            <h3>Predictions:</h3>
+            <ul>
+              {predictions.map((prediction, index) => (
+                <li key={index}>{prediction}</li>
+              ))}
+            </ul>
           </div>
-        ))}
-      </form>
-      <button onClick={handlePredict}>Predict</button>
-      <div>
-        <h3>Predictions:</h3>
-        <ul>
-          {predictions.map((prediction, index) => (
-            <li key={index}>{prediction}</li>
-          ))}
-        </ul>
+        </div>
       </div>
-    </div>
   );
 }
 

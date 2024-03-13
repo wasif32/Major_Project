@@ -36,3 +36,276 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #c288fc);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+.sidebar-item:focus,
+.sidebar-item:active,
+.sidebar-item:focus ~ .sidebar-item,
+.sidebar-item:active ~ .sidebar-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-item {
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-size: 18px;
+  padding: 10px; /* Add padding */
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Include padding in transition */
+}
+
+.sidebar-item:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Increase opacity for more prominent color change */
+  padding: 15px; /* Increase padding on hover */
+}
+
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item.selected {
+  background-color: rgb(
+    6,
+    16,
+    150
+  ); /* Change to the desired color for selected item */
+  color: #fff; /* Change to the desired text color for selected item */
+}
+
+.main-content {
+  flex: 1;
+}
+
+.home-content {
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.home-content p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.home-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-content li {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000; /* Change text color */
+  text-align: center; /* Center text */
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: bold; /* Make the title bold */
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-column-gap: 50px; /* Add space between columns */
+  grid-row-gap: 20px; /* Add space between rows */
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 600px; /* Adjust as needed */
+  padding: 20px; /* Add padding */
+}
+
+.input-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.input-field {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Adjust as needed */
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.diabetes-background {
+  background-image: url("https://publichealth.gwu.edu/sites/g/files/zaxdzs4586/files/images/Diabetes%20generic.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.heart-background {
+  background-image: url("https://www.witf.io/wp-content/uploads/2021/04/iStock-1269115100-1920x1080.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.breast-cancer-background {
+  background-image: url("https://www.oncologynurseadvisor.com/wp-content/uploads/sites/13/2023/09/GettyImages-1491010334.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.parkinsons-disease-background {
+  background-image: url("https://st2.depositphotos.com/36659880/46931/i/450/depositphotos_469312402-stock-photo-brain-symbol-presented-human-brain.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.parkinsons-disease-columns-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  grid-column-gap: 50px; /* Add space between columns */
+  grid-row-gap: 20px; /* Add space between rows */
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 800px; /* Adjust as needed */
+  padding: 20px; /* Add padding */
+}
+
+.heart-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff; /* Change text color */
+  text-align: center; /* Center text */
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: bold; /* Make the title bold */
+}
+
+.heart-disease-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; /* Change text color */
+}
+
+.diabetes-disease-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000; /* Change text color */
+}
+
+.breast-disease-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000; /* Change text color */
+}
+
+.parkinsons-disease-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000; /* Change text color */
+}
+
+.parkinsons-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000; /* Change text color */
+  text-align: center; /* Center text */
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: bold; /* Make the title bold */
+}
+
+.prediction-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px; /* Adjust as needed */
+}
+
+.prediction-item {
+  text-align: center;
+  border: 2px solid #000000; /* Add border */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  margin: 0 20px; /* Add margin for spacing between boxes */
+  background-color: #ccc;
+}
+
+.prediction-item img {
+  width: 100%; /* Make the image cover the whole width of the box */
+  height: 150px; /* Maintain aspect ratio */
+  border-bottom: 2px solid black;
+}
+
+.prediction-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.prediction-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prediction-item ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
